@@ -61,6 +61,8 @@ git push origin 'nome da branch' - envia para o repositório remoto
 git merge 'nome da branch' - mesclar alterações de uma branch para uma branch ativa (master) 
 
 
+!
+
 
 
 
