@@ -1,0 +1,26 @@
+Principais comandos GIT:
+
+git init - iniciar um repositório (master)
+
+git clone - obter um estrutura de projeto de um repositório remoto - clonar
+
+git add . - adciona todos os arquivos do diretório corrente
+
+git add <<nome_arquivo>> - adciona apenas o arquivo específico 
+
+git commit -m 'mensagem de commit' - gera id identificador mais mensagem q eu quero escrever
+
+git push - publicar alterações em um local/remoto - local = minha maquina - remoto = servidor local ou remoto
+
+git pull - atualiza o repositório local através do repositório remoto
+
+git merge - juntar duas alterações
+
+git status - prover informações sobre o estado atual do projeto 
+
+git log - histórico de alterações 
+
+git branch - criação de um novo ramo. Ramos separados para trabalhar fora da Master 
+
+
+

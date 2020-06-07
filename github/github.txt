@@ -1,0 +1,77 @@
+github: 
+
+plataforma onde vc pode expor código fonte que são versionados através do GIT
+
+pull requests - fazer commits que irão depender de aprovação do dono do projeto
+issues - discutir bugs ou soluções de um projeto ou repositório.
+marketplace - soluções integradas com o github - qualidade de código, ferramentos para integração contínua, monitoramento de aplicações
+your profile - meu perfil
+readme - informações sobre o projeto 
+
+---------------------------------------------------------------------------------------------------------
+
+criando um repositório no github: 
+
+new repository > repository name > public or private > owner: dono > create repository.
+
+vamos mandar
+
+git remote add origin https://github.com/cassio-morais/projeto-curso-git - adcionando um repositorio remoto (na raíz do projeto) - MASTER
+
+git remote rm origin - apagar um repositório se o repositório já existir (origin pode ser qualquer nome)
+
+git push -u origin master - enviar para um repositório remoto todos commits pendentes no nosso repositório local
+
+----------------------------------------------------------------------------------------------------------
+
+modifiquei o arquivo index.html local para commitar no repositório remoto
+
+git status - mostra o arquivo não homologado para commit ainda - VERMELHO
+
+git add index.html - rastrea o arquivo modificado para o git - VERDE 
+
+git commit - m 'add estrutura html inicial' - o index.html que foi add para ser comittado é agora comittado no repositório local
+(mostra quantos arquivos foram alterados e quantas inserções)
+
+git log - aparece todos os últimos arquivos commitados
+
+git push - não precisei add o -u pq ele já está vinculado a uma conta de repositório.
+
+--------------------------------------------------------------------------------------------------------------
+
+Trabalhando com Branching
+
+branch são ramos!
+
+Branches permitem que diferentes versões do mesmo conteúdo se desenvolvam ao mesmo tempo, porém de forma independente.
+Enquanto você recombina periodicamente as contribuições de diferentes branches em um processo chamado de 'fusão' merging.
+
+git branch - mostra todas as branch que nós criamos 
+
+git checkout 'nome da branch' - serve para trocar de branch
+
+git branch -D 'nome da branch' - deleta uma branch
+
+git branch 'nome da branch' - cria uma branch mas continua apontando para a origin principal
+
+git checkout -b 'nome da branch' - cria a branch e já vai direto pra ela 
+
+git push origin 'nome da branch' - envia para o repositório remoto 
+
+git merge 'nome da branch' - mesclar alterações de uma branch para uma branch ativa (master) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
