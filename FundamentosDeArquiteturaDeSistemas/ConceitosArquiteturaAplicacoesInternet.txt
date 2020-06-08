@@ -1,0 +1,94 @@
+Introdução Arquitetura de sistemas
+
+Monolito
+
+	arquitetura clássica
+	Banco de dados < instância da aplicação < proxy HTTP < web app/mobile app
+	
+	prós
+		baixa complexidade
+		monitoramento simplificado
+		
+	contra
+		stack única
+		compartilhamento de recursos - não consigo escalar apenas a funcionalidade que mais consome.
+		Acoplamento
+		Mais complexo a escalabilidade
+		
+		
+
+Micro Serviços #1
+
+	Serviços menores que fazem coisas diferentes (comunicam entre si)
+	não está preso a uma tecnologia
+	1 serviço para cada operação
+
+	caótico!
+	
+	prós
+		stack dinâmica
+		simples escalabilidade
+		
+	contra
+		acoplamento - Se um serviço cair, cai tudo. 
+		monitoramento mais complexo 
+		provisionamento mais complexo 
+		
+
+
+Micro Serviços #2
+
+	Message Broker - Serviços não se comunicam diretamente. Utilizam ele para se comunicar
+	Se um serviço cair, o sistema não quebra
+	Ele cria uma fila para aguardar a volta de downtime dos serviços.
+	
+	prós
+		stack dinâmica
+		simples escalabilidade
+		DESACOPLAMENTO!
+		
+	contras
+		monitoramento mais complexo 
+		provisionamento mais complexo 
+	
+Micro Serviços #3
+	
+	Pipeline - 	Proxy HTTP não entrega diretamente para os serviços, ele entrega para o gerenciador de Pipeline
+	Nesse modelo ele faz um determinado processo em um determinado serviço
+	Se o serviço estiver 'fora', ele desfaz o processo anterior (rollback)
+	desvantagem: se o gerenciador cair, cai tudo!
+	
+	
+	prós
+		stack dinâmica
+		simples escalabilidade
+		DESACOPLAMENTO!
+		menor complexidade - todo o fluxo passa por um lugar só
+		
+	contras 
+		provisionamento mais complexo 
+		plataforma inteira depende do gerenciador de pipeline
+		
+	
+------------------------------------------------------------------------------------------------------------------
+
+Gerenciamento de erros e volume de acesso
+
+	Onde é mais complexo:
+
+		processos asíncronos (Micro Serviços #2)
+		Pipeline
+		
+	Solução:
+	
+		Dead Letter Queue - Cria uma fila separada no message broker para ser reprocessada.
+		Filas de re-tentativas
+	
+	
+	
+	
+	
+	
+	
+	
+
