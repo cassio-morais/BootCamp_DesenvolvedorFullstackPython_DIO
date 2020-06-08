@@ -1,0 +1,155 @@
+Serviços Web
+
+	soluções para que aplicações se comuniquem independente de linguagem, softwares e hardwares utilizados.
+
+	nasceu com o XML sobre o protocolo HTTP - identificado pela URI (url)
+
+Serviços Web são API's.
+
+Todos serviçoes utilizam o protocolo HTTP
+
+
+Vantagens:
+
+	linguagem comum 
+	Integração
+	Reutilização de implementação
+	Segurança
+	Custos
+
+Principais tecnologias:
+
+	SOAP
+	REST 
+	XML
+	JSON
+
+--------------------------------------------------------------------------------------------------------
+
+Estrutura SOAP
+
+SOAP - Simple Object Access Protocol (ELE É UM PROTOCOLO!)
+
+XML sobre HTTP
+facilita integrações entre aplicações
+meios de transporte é genérico - PODE SER USADO POR OUTROS PROTOCOLOS ALÉM DO HTTP - Exemplo: SMTP
+
+XML - Extensible Markup Language - criada anos 90 pela w3c
+
+facilita a separação de conteúdo
+não tem limitação de criação de tags
+
+SOAP MESSAGE = Envelope, header e body
+
+SOAP Envelope = primeiro elemento do documento, é usado para encapsular toda a mensagem SOAP
+
+	SOAP Header = é o elemento onde possui informações de atributos e metadados da requisição
+	
+					ip de origem
+					dns
+					autenticação/token
+					
+	SOAP Body = é o elemento que contém os detalhes da mensagem
+	
+					conteúdo da mensagem
+					
+	
+---------------------------------------------------------------------------------------------------
+
+WSDL - Web Services Description Language = contrato
+	
+	Decreve Web Services - como um contrato
+	feito em XML - decreve serviço, especificação de acesso, operações e métodos
+	
+	exemplo WSDL: http://www.soapclient.com/xml/soapresponder.wsdl
+	
+	soap UI - ferramenta para entender arquivos wsdl
+	
+XSD - XML Schema Definition = validação dos dados 'vai dentro da tag'
+	
+	schema no formato XML - define estrutura de dados que será validada no XML
+	funciona como uma documentação de como deve ser montado o SOAP Message (XML) que será enviado através de Web Service
+	
+	
+---------------------------------------------------------------------------------------------------------
+
+REST - Representational State Transfer
+
+	estilo de arquitetura de software que define a implementação de um serviço web
+	podem usar formatos como: XML, JSON E OUTROS
+	
+	Transferência de um objeto em um determinado estado (naquele momento)
+	
+	Rest NÃO É um protocolo, é um designer, uma arquitetura.
+	
+API - Application Programming Interface 
+
+	conjuntos de rotinas documentadas e disponibilizados por uma aplicação para que outra aplicações possam consumir
+	suas funcionalidades
+	
+	Popularizou com o aumento dos serviços web
+	
+	Grandes plataformas disponibilidam para consumo: Facebook, Twitter... etc... 
+	
+	
+métodos HTTP
+
+	GET - Solicita a representacao de um recurso
+	POST - Solicita a criação de um recurso 
+	DELETE - Solicita a exclusao de um recurso
+	PUT - Solicita a atualizacao de um recurso
+	
+
+JSON - Javascript Object Notation
+
+	Formatação Leve 
+	utilizada para troca de msg entre sistemas
+	usa-se de uma estrutua CHAVE:VALOR e tbm de LISTAS ORDENADAS
+	Um dos formatos mais populares e utilizados para troca de mensagens entre sistemas
+	
+	
+---------------------------------------------------------------------------------------------------------------------------
+	
+Códigos de Status HTTP
+
+	Usado pelo servidor para avisar o cliente o estado da operação solicitada
+	
+	1xx - informativo	
+	2xx - sucesso
+	3xx - redirecionamento
+	4xx - erro do cliente
+	5xx - erro do servidor
+	
+	https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Status
+	
+	
+
+
+
+
+	
+
+
+
+
+
+	
+	
+
+	
+
+
+	
+
+
+
+
+
+
+
+
+
+ 
+
+
+
