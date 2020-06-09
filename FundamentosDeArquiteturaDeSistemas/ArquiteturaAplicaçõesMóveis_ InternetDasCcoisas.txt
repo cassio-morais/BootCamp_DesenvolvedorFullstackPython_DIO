@@ -1,0 +1,233 @@
+A arquitetura de aplicações móveis e internet das coisas
+
+inicio internet
+	
+	arpanet
+		conectar centros de pesquisa
+	
+	internet 
+		rede de pessoas conectadas
+		
+	
+
+
+internet das coisas
+	
+	coisas não pessoas
+		Embutir sensores em objetos do dia a dia
+		coletar dados dos sensores
+		usar o dado para tomar decisão
+		
+		
+Conceitos básicos de IOT
+
+	Things
+	Cloud
+	Intelligence
+	
+	ex:
+		Smart Building
+			
+			coletar informações de componentes de construções (casas, galpões, empresas, fábricas)
+			
+		Smart Home
+			
+			Coletar dados de sensores 
+			ex.: fechadura eletrônica, sistema de alarme, sensores de temperatura, gerenciamento de energia...
+			
+		Wearables
+			
+			vestíveis
+			Devices que colocamos no corpo
+			coleta de dados sobre saúde, lugares...
+			
+		Agriculture
+			
+			processos produtivos sustentaveis
+			ex.: sensor que mede a umidade do solo
+			
+		Smart transportation
+			
+			ex.: veículos que coletam dados de trânsito
+			
+		RFID - Radio Frequency Identification Supply Chain - cadeia de suprimento
+			
+			Etiquetas por rádio frequência
+			
+		Energy Efficiency
+			
+			Coletar dados de fontes geradoras e consumidoras de energia
+			
+			
+computação ubíqua (que está ou existe ao mesmo tempo em toda parte; onipresente)
+
+		Mainframes > Computação Pessoal > Computação Ubíqua
+		
+
+Desafios da Internet das Coisas
+
+	Privacidade e Segurança
+	Quantidade exponecial de dispositivos conectados na rede
+	Capacidade de processar e armazenar uma enorme quantidade de informações
+	Gerar valor a partir dos dados coletados
+	
+-----------------------------------------------------------------------------------------------
+
+Arquitetura da internet das coisas
+
+	Problema a resolver - Estudo de caso
+	
+		coletar dados de uma frota de carros de uma empresa em tempo real e armazenar na nuvem
+		criando um mapa de localização desses veículos
+	
+		Conectando as coisas
+		
+			Things (a bunch of devices)
+			
+			a se considerar: 
+				Baixo consumo de energia
+				Rede de dados limitado
+					ex: buffer local
+				Resiliencia
+				Segurança
+				Customizacao
+					atendimento da necessidade
+				Baixo Custo 
+			
+			
+		Arduino
+			
+			Placa única com um micro controlador
+			Plataforma de prototipagem
+			Com entradas/saídas
+			Desenvolvedor escreve em C/C++
+			Interface serial ou usb
+			Shields (da capacidade de conectividade - adaptação)
+			
+		Embarcados
+			
+			MCUs
+				Feito para produção e missão crítica
+				Microcontrolador de chip único
+				Sistema operacional real time
+				embarcado
+				uso industrial, médico, militar, transporte
+				Sistema operacional real-time. ex.: https://www.freertos.org
+			
+		Minicomputadores
+		
+			Raspberry pi
+				Computador completo
+				Hw integrado em um única placa
+				Roda SO linux ou Windows
+				Uso doméstico e comercial
+				
+	O protocolo de comunicação - Estudo de caso
+	
+		Smartphone / GPS Tracker
+		
+	O protocolo MQTT -  Message Queue Telemetry Transport
+	
+		Base na pilha do TCP/IP
+		protocolo de mensagem assíncrona (M2M) - Machine to Machine
+		Criado pela IBM para conectar sensores de pipelines de petróleo a satélites
+		Padrão OASIS suportado pelas linguagens de programação mais populares
+		
+		ps. Modelo client / servidor - síncrono
+		
+	Modelo Publish/Subscribe
+	
+		GPS > (publish) > MQTT Broker > (subscribe) > server/client  
+		
+		
+		Publish
+			
+			GPS > MQTT Broker
+			
+			pub mqtt://  endereço do broker / id do Usuario / sensor / information type {latitude:longitude}
+			    protocolo
+			
+			
+		Subscribe
+		
+			consumir informações (client, software, device...)
+			conectar no Broker 	
+			sub protoclo / broker / user / gps / position
+			+ = retorna all
+			# = retorna todos na cadeia
+			
+		QoS 0 (nível de qualidade de serviço) 
+		
+			Nível mínimo de menor esforço
+			Sem garantia de entrega
+			Mensagem não é retransmitida 
+		
+		QoS 1 
+		
+			Publish - Puback (confirmação de armazenamento)
+			Garante que a msg foi entregue
+			Msg pode ser retransmitida pelo menos 1 vez
+			Mais comum 
+			
+		QoS 2 
+			
+			Publish - Pubrec - Pubrel - Pubcomp
+			
+			garante que a mensagem foi entregue no mínimo uma vez ao recebedor
+			msg pode ser retransmitida se não houver confirmação de entrega 
+			
+		Cloud
+		
+			gigante quantidade de devices conectados
+			tera ou petabytes de informações
+			potencial de escala global
+			
+			
+				    > Worker > Data Store
+			Broker 
+					> Worker > Cache > Real-time Data Analytics 
+					
+			Levar em consideração o volume no armazenamento (escala global)
+			Bancos NOSql melhor solução 
+			Document DB
+			
+	Parte Final Estudo de Caso
+			
+		Arquitetura é escolha
+		
+		Prova de conceito:
+		
+			App android >>>>>>> Eclipse Mosquitoo >>>>>>> Node.js >>>>>>> banco de dados Mysql
+			  Device     pub>	    Broker	       <sub    Worker
+							   
+		Mínimo Produto Viável:
+		
+			GPS Embarcado >>>>>>> HiveMQ  >>>>>>> Akka Scala JVM >>>>>>> Banco de Dados NOSql (MONGO DB)
+			  Device       pub>	  Broker   <sub      Worker
+			  
+		Solução:
+							      
+								  CLOUD NATIVE
+								  
+			Gps Embarcado >>>>>>> AWS Iot Core >>>>>>> Aws Kinesis Firehose >>>>>>> AWS S3   
+				Device      pub>	 Broker     <sub         Worker
+			
+		
+		IOT NA PRÁTICA
+		
+			gps >>>>>>> broker >>>>>>> Worker >>>>>>> Cache >>>>>>> interface gráfica/web
+			     mqtt     		mqtt     		tcp    		socket.io
+			
+
+			
+			gps embarcado >>>>>>> AWS Iot Core >>>>>>> AWS Data Stream >>>>>>> AWS Lambda >>>>>>> Aws ElasticCache Redis
+			     
+			 
+			Aws ElasticCache Redis >>>>>>> AWS EC2 >>>>>>> FeathersJS Backend >>>>>>> Dashboard
+			   
+			  
+	
+			
+			
+			
+			
