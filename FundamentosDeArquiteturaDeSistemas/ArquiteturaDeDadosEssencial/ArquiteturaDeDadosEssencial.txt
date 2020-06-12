@@ -1,0 +1,311 @@
+Conceitos introdutórios e o que é um banco de dados
+
+	Conceitos de dados
+	
+		dados = valores e ocorrências que descrevem uma característica
+		
+		importancia = dados > informação > conhecimento
+		
+		Modelo sustentável
+		
+			estruturação
+			durabilidade
+			velocidade
+			controle de acesso
+			isolamento
+			
+		O que podemos extrair de dados brutos?
+
+			informações e com ela CONHECIMENTO
+			
+		
+	o que é um banco de dados?
+	
+		abstração
+	
+			Físico (armazenamento) > abstração > visão1/2/3 (usuário)
+		
+		SBDBs - Sistema que gerencia bancos de dados
+		
+			Linguagem de Definição - Define a estrutura dos dados
+			Linguagem de manipulação - Recupera ou altera alguma informação
+			dicionário - Banco de dados dentro do banco de dados que guarda toda a estrutura
+			
+		Modelo Flat
+		
+					 	    nome		  telefone			Profissão
+			registro 1		xxxx		(31)9999999			Vendedor
+			
+			Ex.: Nada mais que uma tabela (excel)
+			
+		
+		
+		Modelo hierarquico (arvore de decisão invertida, rápido, complicado de se manter, redundância de informação) 
+		
+			Divisão de certos aspectos da informação em árvore hierarquica. Ex.: Registros do Windows
+			
+								Administrativo
+				⬇️					  ⬇️					⬇️
+			Vendedor 			  Analista			Manutenção
+			
+		
+		Modelo Relacional
+			
+			Modelo mais usado
+			
+			Conjunto de tabelas do modelo flat que se relacionam entre si obedecendo algumas regras
+			
+			CódigoPessoa	nome		  telefone			Profissão
+			registro 1		xxxx		(31)9999999			    1
+			registro 2		yyyy		(31)8888888			    2
+			
+															    ||
+															    ||
+															    \/
+																
+															códigoProfissão		Profissão
+																1				Vendedor
+																2				Consultor
+			
+		Outros Modelos
+		
+			Redes - Grapho (assemelha ao hierarquico) 
+			
+			Orientado a Objetos - objetos complexos
+			
+			Objeto Relacional - Objetos complexos + modelo relacional
+			
+			Big Data - 
+		
+
+BANCO DE DADOS RELACIONAIS
+
+	Modelo mais utilizado na industria e comércio
+	até mesmo no mobile
+	
+	SGDBR - Sistemas de bancos de dados relacionais 
+	
+		tabelas = entidades que agrupam nossas informações
+		
+		linhas = registros ou tuplas 
+		
+		colunas = classificação, definicao do que significa cada informação (topo)
+		
+		chaves PK/FK
+			Chave primária: não podem se repetir - única
+			Chave estrangeira: são chaves primárias de outras tabelas
+			que criam a correlação entre tabelas (herança de chave primária)
+			
+			
+	MODELAGEM
+	
+		Modelo conceitual - MER (Modelo Entidade e Relacionamento)
+		
+			Descrevem as entidades e seus tipos de relacionamentos
+			
+			DER (Diagrama de entidade e relacionamento)
+			
+				Nome da entidade - tabelas
+				
+				Atributos - colunas 
+				
+				Relacionamento 
+				
+					entidades fortes: entidades (tabelas) que NÃO dependem de outras para existir
+					
+					entidades fracas: entidades (tabelas) que dependem de outras para existir
+					
+					cardinalidade: 1,1 1,N N,M 0,1 0,M 
+					
+					
+						relacionamento m,n (muitos para muitos)
+						
+							entidade associativa = entidade que explica a relação de multiplicidade 
+							transação atomica
+			
+							normalização
+							
+							5 formas
+							
+							1 a 3 mais comuns
+							
+							
+						
+		
+		Modelo lógico 
+		
+			Implementação do modelo conceitual no banco de dados escolhido
+			
+--------------------------------------------------------------------------------------------------------------
+
+
+SGDBR - SQL
+
+		Structured Query Language
+		
+			DDL - Data Definition Language
+			
+				Criar o dicionário do banco, definir entidades e relacionamento.
+				
+				ex: 
+					Create Table Cliente (
+					
+					)
+					
+				É recomendado usar uma chave primária!
+			
+			DML - Data Manipulation Language
+
+				responsável por manipular
+					incluir
+					alterar
+					remover
+					
+				NULL e vazio são diferentes! Padrão é NULL
+				
+				ex: 
+					Insert into Cliente (campos)
+					values("valores")
+					
+					Delete from Cliente 
+					Where Codigo = 1
+					
+					Update Cliente 
+					set Nome = "valor"
+					Where Codigo = 1
+					
+				
+				
+			DQL - Data Query Language
+			
+				Extração dos dados
+				
+				Ex:
+					Select Codigo, Nome
+					From Cliente
+					<Where> Codigo = 1
+						<Group by> Profissao //consulta de conjuntos
+						<Having> Count(1)>0  //consulta de conjuntos
+					<Order> by Nome, Codigo
+				
+					
+-------------------------------------------------------------------------------------------------------------------			
+
+Transactions		
+
+	Aquilo que pode ser feito dentro da sessão
+	começo, meio e fim.
+	
+	inicio 
+		insert, update, delete
+	
+	resolucao 
+		Commit = ok
+		Rollback = Banco não aplica a ação, desfaz.
+	
+	fim 
+		Novos dados ou dados originais
+		
+	ACID 
+		
+		Atomicidade
+			Todas operações executadas com sucesso. Commit ou Rollback
+		
+		Consistencia
+			Garantir a unicidade das chaves, as retrinções de integridade lógicas, etc...
+		
+		Isolamento
+			Várias transações podem acessar simultaneamente o mesmo registro (ou parte do registro)
+		
+		Durabilidade
+			Depois do commit, mesmo com erros ou queda de energia. As alterações devem ser aplicadas.
+			log transacional: aplica as transações pendentes.
+			
+			
+	 
+--------------------------------------------------------------------------------------------------------------------		
+
+SGDBR na prática	
+	
+	Comerciais
+		
+		Oracle
+			um dos mais utilizados no mundo 
+		
+		Microsoft SQL Server
+			robusto, muito utilizado no mundo.
+		
+		IBM DB2
+		
+	Gratuitos 
+	
+		PostgreSQL
+			Chega a equivaler ou superar bancos de dados comerciais
+			
+		Mysql
+			muito utilizado em websites e aplicativos leves
+			garantias reduzidas das regras relacionais - leve e rápido
+			Mais rápido
+			
+		SQLite 
+			Embarcados 
+			Não é focado para acesso distribuído
+			Arquivo com gerenciador baseado em Java
+			
+			
+			
+POSTGRES - Exemplo
+
+	instalar
+	criar um server 
+	server > databases > botão direito > create > databases > criar tabela aula
+	aula > botão direito > Query tool > 
+	
+		create table cliente(
+		codigo numeric(10) not null primary key,
+		nome varchar(100) not null,
+		telefone varchar(15)
+		)
+		
+	OBS.:
+		comandos DDL -  Data Definition Language (create table, drop table) 
+		não necessitam de commit. Ele é automático 
+	
+	
+	exemplo de comando DML - Data Manipulation Language:
+	
+	insert into cliente (codigo,nome,telefone)
+	values (1,'Fulano de tal','(88)8888 9999)
+	 
+	delete from cliente 
+	
+	exemplo de comando DQL - Data Query Language
+	
+	select * from cliente
+ 
+	
+	OBs.: 
+	
+	Linux: sudo apt update
+		   sudo apt install postgresql postgresql-contrib
+		   
+		   sudo su postgres 
+			psql (terminal interativo)
+			create table...
+			insert ...
+			commit...
+			etc... 
+		   
+	
+	
+		
+		
+		
+		
+
+
+	
+
+	
+		
+		
