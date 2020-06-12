@@ -1,0 +1,325 @@
+FUNDAMENTOS DE UI/UX
+	
+	CONCEITOS DE RESPONSIVIDADE E EXPERIÊNCIA DO USUÁRIO
+	
+	
+		BRIEFING, IMERSÃO E UNPACK
+		
+		
+		
+			Briefing = entendimento do objetivo do projeto (porquê, solução inicial, resultado?)
+			
+			Imersão = conhecer o problema!
+						contexto
+						público
+						stakeholders
+						premissas
+						regras de negócio
+						histórico 
+						estratégia
+						demandas
+						reclamações
+						etc...
+			
+			Unpack = ouvir informações diferentes de vários interessados e participantes, criando todas hipóteses possíveis.
+			
+	
+	
+	WIREFRAMES, GRIDS E HIERARQUIA
+	
+	
+		Estrutura: como os objetos devem ser posicionados no layout?
+		
+		Conteúdo: Como serão colocados os conteúdos para ajudar na usabilidade e interatividade do usuário?
+		
+		Hierarquia informativa: Como o conteúdo será organizado e apresentado
+		
+		Funcionalidade: Como será a usabilidade em cima da Interface? 
+						Em relação ao comportamento, como interagir com o usuário?
+						Como ele se comporta?
+				
+				
+						
+	GRIDS, ALINHAMENTO E ESPAÇAMENTO
+		
+		GRID: Podemos mais facilmente determinar o fluxo de leitura que queremos que o nosso leitor tenha.
+		
+			ajuda a projetar proporções hamoniosas
+			atenção: observe espaçamento, alinhamento de texto e elementos da interface. Foco na responsividade.
+			
+	
+	LUZES, SOMBRAS, CONSISTÊNCIA E PADRÃO
+	
+		Luzes e sombras: 
+			
+			movimento, profundidade, sobreposição e contraste
+			separar elementos, menus, dermarcar areas importantes
+			indica ações possíveis no projeto 
+			
+		Consistência e padrão:
+			
+			tom de redação - UX Writer
+				Ex.: nubank - linguagem jovem
+				     bradesco - formal
+					 
+			padrão visual - Design system
+				Manter uma consistência, padrão visual
+				banner, site, cartão de visita, folder, flyer...
+				
+			Consistencia em varios dispositivos - UX Design
+				manter uma qualidade em qualquer dispositivo em qualquer tela.
+				
+				
+				
+-----------------------------------------------------------------------------------------------------------------			
+	
+	Cores da interface:
+	
+		Psicologia das cores 
+		
+		Ex.: 
+			Cores quentes para consumo de alimentos (Mcdonalds, Bugger King...)
+			
+		Cores primárias - UI primárias:
+		
+			Azul, Laranja e Cinza
+			fria, quente, neutra.
+			
+		Cores secundárias - UI secundárias:
+		
+			Escolher cores que por padrão já tem significado próprio.
+			
+			Verde: sucesso de ação
+			amarelo: aviso
+			vermelho: erro 
+			...
+			
+		Gradiente:
+			Voltou em 2017
+			impacto visual
+			estimula o usuário
+			sensação de dinamismo e movimento 
+			interfaces devem ser amigáveis e intuitivas: cores, tentativa de aproximação e melhora na experiência
+			
+		Tipografias:
+		
+			Qual escolher:
+				O que elas dizem sobre você?
+				
+			tipos de fonte:
+			
+				Serifadas: 
+					Pequenos traços ou prolongamentos no final das letras
+					conceito de seriedade e tradicionalidade
+					
+				Sem Serifa (sans-serif):
+					Sem linhas extras no final das letras
+					Mais modernas e dinâmicas
+					Leitura melhor 
+					Mais arredondadas
+					
+				Cursivas (script):
+					Manuscritas ou caligráficas
+					elegante, pessoal e exclusivo 
+					ou
+					divertido e descontraído
+					
+				Decorativas ou fantasia (display):
+					Chamar a atenção
+					inusitadas
+					usar em doses pequenas
+					efeito e propósito específico
+					
+			Tamanho e peso:
+			
+				Tamanho padrão de texto browser: 16px
+				Distância na leitura no computador maior que lendo um livro
+				
+				O peso é a grossura dos caracteres de um tipos
+				atributo definido pela propriedade font-weight
+					normal
+					bold (negrito)
+					bolder (mais negrito)
+					lighter (mais fino)
+					
+						100 - Thin
+						200 - Extra Light (ultra light)
+						300 - light
+						400 - Normal
+						500 - Medium
+						600 - Semi bold (Demi Bold)
+						700 - Bold
+						800 - Extra Bold (Ultra Bold)
+						900 - Black (Heavy)
+						
+						
+	Componentes da interface do usuário
+	
+		Iconografia
+		
+				vem do Grego 'eikon', significa imagem
+				comunicar através de uma imagem comumente compreendida
+				primeiros ícones familiarizados:
+					objetos de escritório
+					programas de software
+					
+			Como utilizar os ícones na UI
+			
+				Mantenha simples
+					ícone de compra 
+					coração
+					
+				Combinar icones e palavras:
+					Texto criam confiança para o usuário na sua interação
+					
+				ícones familiares:
+					Usar ícones que são familiares a plataformas de mesmo segmento
+					
+				espaçamento:
+					1cmX1cm em torno do ícone
+					melhor para celulares
+					telas pequenas 
+					
+				consistência:
+					considerar palheta de cores
+					máximo 3 cores 
+					repetir é bom 
+					peso e estilo são decisivos
+					
+			Utilizando imagens:
+			
+				Capturar a atenção do usuário
+				diferenciar seu produto 
+				Uma imagem pode dizer mais do que palavras 
+				Atravessam as barreiras linguisticas
+				Imagens não podem ser tratadas como decoração
+				
+				contexto relevante:
+				
+					Usuários reagem mais rápido a imagens do que ao texto
+					
+				relevância:
+				
+					O objetivo não são exibir imagens, mas elas podem indicar o propósito do produto.
+					não exagere
+					
+			Guias de estilo - Manuais
+			
+				Criado pelo designer ou equipe de designers
+				identidade visual 
+				determina aplicação da marca em diferentes ambientes (gráfico, web, etc)
+				
+					
+
+----------------------------------------------------------------------------------------------------------
+
+	Processos do Mundo Real
+	
+		Mobile first
+		m-commerce - mobile commerce
+		site adaptado para tela do celular
+		
+		Responsividade:
+			
+			usando uma mão
+			Facilidade e conforto de acesso
+			boa experiência de uso
+			satisfação do usuário
+			fidelização do usuário
+			
+			Ferramentas importantes 
+			
+				Google Resize
+				Window resize - extensão 
+		
+		Acessibilidade:
+		
+			empatia e inclusão:
+			
+				Como o público desse produto utilizaria esse produto
+				Quem é esse público?
+				
+				
+			Serviços que funcionam para todos 
+				
+				saber para quem se está projetando 
+				(autistas, def auditivos ou surdos, dislexia, baixa visão...)
+				
+		
+		Prototipagem:
+		
+			necessidade de melhorar experiência do usuário
+			atualizar modelos de negócios, criar produtos ou serviços
+			Longa duração: pode ser refeita várias vezes
+			minimizar custos do time ou freelancer
+			
+			baixa fidelidade
+				representação conceitual
+				análoga a idéia
+				não causa expectativa ou frustração
+				para o usuário entender a boa experiência
+				
+			média fidelidade
+				representação dos aspectos da idéia
+				
+			alta fidelidade
+				Mock-up da ideia
+				próximo da solução final 
+				
+				
+			níveis de contextualidade
+				
+				restrita 
+					ambiente controlado 
+					UXers
+				geral
+					qualquer usuário 
+					qualquer ambiente 
+				parcial
+					usuário final ou ambiente final 
+				total
+					usuário final e ambiente final 
+					
+					
+	PORTIFÓLIO, CLIENTES E APRESENTAÇÃO
+	
+		mostrar o trabalho a um potencial empregador ou cliente
+		
+		imagem mais profissional
+		
+		cases do portifolio
+		
+			desafio do cliente
+			solução sugerida
+			como chegou a solução
+			projeto finalizado 
+		
+			
+			
+	CONSIDERAÇÕES FINAIS
+
+		Medium: ui-lab-school / ux-strategy
+		ideo.com
+		material.io
+		youtube: UX lab / UX now
+		Livros:
+			Não me faça pensar
+			Arquitetura da informação para a WWW
+		
+				
+				
+		
+				
+			
+			
+			
+					 
+				
+			
+			
+		
+	
+						
+						
+						
+		
