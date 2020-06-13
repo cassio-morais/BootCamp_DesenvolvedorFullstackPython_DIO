@@ -1,0 +1,17 @@
+HTML5
+
+	Versão mais nova do padrão HTML5
+	Padrão criação de páginas web
+	5 = novos elementos que proporcionam suporte a maior interatividade com o usuário
+	
+	
+css3
+
+	Cascading Style Sheets (Folha de Estilo em Cascata)
+	Utilizado para adicionar estilo/aparência a um doc web 
+	CSS3 trouxe funcionalidade interação maior do usuário
+	como transições e animações
+	
+
+	
+	

@@ -1,0 +1,56 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    background:#7B68EE;
+    margin-left: 300px;
+    margin-right: 300px;
+}
+
+header{
+    margin-top: 30px;
+}
+
+h1 {
+    color: white;
+    font-family: tahoma;
+}
+
+h2 {
+    font-family:tahoma;
+    color: white
+} 
+
+p {
+    color: white;
+    font-size: 18px;
+    font-family:tahoma;
+}
+
+img {
+    margin-bottom: 20px;
+}
+
+a{
+    color: white;
+    font-family: tahoma;
+}
+
+nav,ul,li{
+    color: white;
+    font-family: tahoma;
+}
+
+footer{
+    margin-bottom: 30px;
+}
+
+.img_padrao {
+    margin-bottom:20px;
+    width:300px
+}
+
+.logo{
+    width: 30px;
+}
