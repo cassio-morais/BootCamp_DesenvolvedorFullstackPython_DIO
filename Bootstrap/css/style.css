@@ -1,0 +1,28 @@
+body{
+    font-family: 'Trebuchet MS';
+    scroll-behavior: smooth;
+}
+
+
+.navbar {
+    background-color:#E2C99C;
+}
+
+.nav-item{
+    font-size: larger;
+}
+
+.quem-somos{
+    background-color: #F5EAD7;
+    color:rgb(119, 65, 65);
+}
+
+.margin{
+    /* margin-top: 30px; CRIA UM ESPAÇAMENTO ACIMA (EXTERNO), MELHOR PARA SER USADOS COM FUNDOS DA MESMA COR */
+    padding-top: 30px; /*  'padding' CRIA UM ESPAÇO DENTRO DO ELEMENTO (INTERNO) COMO SE "ESTICASSE"*/
+    padding-bottom: 30px;
+}
+
+.bg-footer{
+    background-color:#E2C99C;
+}
