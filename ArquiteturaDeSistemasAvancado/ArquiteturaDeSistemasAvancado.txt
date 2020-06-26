@@ -1,0 +1,302 @@
+Arquitetura de Sistemas Avançado
+
+Conceitos de integração de sistemas e mensageria 
+
+	O que é uma arquitetura em mensageria?
+
+			Prós
+				
+				Desacoplamento
+					serviços não comunicam entre si, assincrono
+					através do message broker
+					
+				Plug and play
+					colocar/trocar um serviço sem alterar outros 
+					
+				comunicacao assíncrona
+					mensageria, buffer 
+					
+				simples escalabilidade
+					
+				broadcasting
+					enviar msg para todos serviços que estão escutando
+					
+				permite Event Source
+					Lista de mensagens/eventos/operacoes 
+					
+			Contras
+			
+				Single point of failure
+					se o serviço de mensageria falhar...
+					
+				Difícil monitoramento
+					serviços conversando de forma assíncrona
+					difícil fazer um rastreamento
+					
+
+	Comunicação assíncrona entre serviços
+
+		Comunicação
+		
+								  request http
+			passo 1		web app > proxy http > serviço 1 > message broker 
+
+			passo 2		Message broker > serviço 2 > Message Broker  
+
+			passo 3		Message broker > serviço 3
+			
+			
+			passo 1 					serviço 1
+										↓		↓				#indicam consumo de mensagem por serviços
+			passo 2				serviço 2       serviço 3
+								↓	↓			↓		↓
+			passo 3		  serviço4 serviço5	 serviço6 serviço7
+			
+	
+	
+	Gerenciamento de erros
+
+		Dead Letter Queue (filas de re-tentativas)
+			
+		Monitoramento entre serviços
+			
+		Rastreamento de fluxo
+		
+
+
+----------------------------------------------------------------------------------------------------------------
+
+
+Arquitetura de dados não estruturados e business intelligence
+
+	business intelligence em modelos de dados
+	
+		BI é composto:
+			Ferramentas
+			infraestrutura
+			Profissionais 
+			Dados
+			
+
+Data Warehouse
+
+	Estratégia/estilo de modelagem de dados para apoio ao BI
+	
+		OLTP X OLAP
+		
+		On-line Transaction Processing
+		
+			atende uma gama grande de usuários
+			
+		On-line Analytical Processing
+		
+			gama reduzida: diretores, responsáveis, coordenadores
+			
+		
+Big Data
+	
+	Grande volume de dados
+	
+		estruturados
+			rígido a mudanças no dicionário de dados
+			
+		semi estruturados
+			xml, rdf, owl, json
+			estrutura básica
+			NoSql - Not Only SQL
+			
+		não estruturados
+			Todo o resto (redes sociais, internet, apis...)
+			
+		
+		inumeros formatos
+		
+		
+Data Lake
+
+	Lago de dados 
+	
+	reservado, corporativo 
+	
+	apresentação mongoDB
+	
+
+
+--------------------------------------------------------------------------------------------------
+
+Fundamentos de arquitetura de aplicações em nuvem
+
+	Cloud Computing
+	
+		gerenciamento de hardware/software
+		
+		provedores de servidor e armazenamento
+		
+		pague o que consumir
+		
+		Iaas, Pass, Baas 
+		
+			Infrastructure as a Service
+				nascimento do cloud
+				GCP, AWS, Azure
+				
+			Plataform as a Service 
+				revolução
+				GCP, AWS, Azure
+				automatização, escalonamento, orquestração
+				terraform, cloud formation... 
+			
+			Backend as a Service 
+			Mobile  ||    ||
+				Firebase
+				
+	Disponibilidade
+	
+		Iaas - hardware e internet
+		
+		Paas - auto scale on the go
+		
+		Baas - não há backend service
+				
+				
+		Kubernets 
+		
+		Múltiplos nodos
+			mínimo 3 workers kubernetes
+			
+		Load Balancer 
+			Gerenciador de entrada, conexão
+			
+			
+	Servless
+	
+		sem servidor
+		ser serviço rodando
+		sem down time
+		log disponível
+		
+		caro
+		execuções rápidas
+		lambdas enxutas
+		nano serviço
+
+
+-----------------------------------------------------------------------------------------------------------
+
+		
+		
+Desenvolvimento e operação de software integrado
+
+	
+	Framework Calms
+	
+		Culture > automation > Lean > Measurement > Sharing 
+		
+		DevOps resolve problemas humanos
+		
+		Automatização gera velocidade na entrega, produtividade
+			Compilação, teste, implementação e provisionamento 
+			
+		Foco na entrega de valor. Objetivo e enxuto. 
+			conhecer as limitações e gargalos do processo (agile, scrum, kanban)
+			
+		Cíclico e infinito. Mensurar e obter métricas > previsibilidade, mudanças...
+		
+		Compartilhamento de informações 
+			descentralização de conhecimento
+			evita times dependentes
+			autosustentabilidade
+			
+	Os três caminhos
+	
+		Flow
+			otimização do fluxo
+			elimina gargalos, transferência de responsabilidade e tempo de espera
+			Da demanda até a entrega em produção
+			metodologia ágeis
+			
+		Feedback
+			Ciclos rápidos de feedbacks
+			teste AB, cliente, monitoria...
+			alerta em qualquer falhar
+			monitoramento é a chave 
+				falhar rápido, corrigir rápido 
+			Hipóteses são melhores do que certeza imediata
+			Processo científico e segurança psicológica
+			cultura da culpa não existe	
+						
+		Learning
+			Experimentos
+			trabalho dinâmico 
+			Eliminar cultura da culpa 
+			colaboração e compartilhamento de conhecimento 
+			
+		
+		
+		Plan > Code > Build > Test > Release > Deploy > Operate > Monitor 
+		Repete 
+			
+			
+			
+Continuous Integration vs Continuous Deployment 
+		
+		CI
+		
+			contrução, teste unitário, teste de qualidade do código e empacotamento
+			geração do artefato 
+			necessita de um aprovador
+		
+		CD (em paralelo CI)
+		
+			Deploy automático
+			
+			
+		
+Code Quality Analysis
+	
+	Continuous Inspection
+	
+			sonarqube, code climate, codacy
+			
+			Complexidade ciclomática
+				Quantos caminhos independentes em determinado ponto da aplicação 
+			
+			código duplicado 
+			
+			Vulnerabilidade / code smell
+			
+				ex: uma  senha no código, método muito grande, código comentado
+				
+			Padronização e Estilo
+				
+			
+			débito técnico 
+			
+			
+			Cobertura de teste 
+			
+			
+			Métricas
+			
+			
+			Validação de pull requests 	
+
+				
+			
+			
+		 
+			
+
+	
+		
+		
+		
+			
+			
+	
+	
+		
+		
+				 
+			
+			
