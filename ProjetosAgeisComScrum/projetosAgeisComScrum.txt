@@ -1,0 +1,161 @@
+Introdução ao Scrum
+
+	Introdução a gestão de projetos e ao Scrum
+	
+		Desafios do desenvolvimento de software
+		
+			objetivos de negócio > processo de desenvolvimento > software
+	
+
+		Cerimônias do Scrum
+		
+			time-box
+				tempo máximo para cerimônia ou desenvolvimento em uma sprint
+			
+			Sprint 
+				corrida, arrancada em no máximo 30 dias corridos
+				
+				Planejamento
+					P.O, Scrum Master, time dev
+					
+					time box: 8h (30 dias)
+					
+					4hs = prioridade e planejamento (P.O apresenta)
+					
+					Product backlog - O que fazer e como fazer.
+					
+					Planning Pocker
+									
+				Reuniões diárias
+					time desenvolvimento, p.o, scrum master
+					time-box 15 minutos
+					em pé
+					no mesmo horário 
+					kanban
+						to do, doing, done
+					
+				revisão da sprint
+					Último dia da sprint 
+					time-box: 4h (sprint 30)
+					time DEV apresenta para o P.O o trabalho feito
+				 
+				retrospectiva da sprint
+					Reunião da equipe para lições aprendidas
+					Transparência
+					principalmente devs (pode participar o scrum master e o P.O)
+					time-box: 3h (sprint 30)
+					
+					
+----------------------------------------------------------------------------------------------------------
+
+Fundamentos de um projeto ágil
+
+	Papeis e responsabilidades do PO 
+		
+		Trazer o maior valor possível ao produto		
+		tem a visão do que será desenvolvido 
+		necessidade
+		público 
+		objetivos a serem alcançados
+		planeja ajustes na sprint
+		reajusta 
+		cancela
+		participação obrigatória Planning e Review
+		Toda dúvida é valida!
+		
+		Refining não é uma cerimônia oficial
+			o time já saber previamente o que vai ser desenvolvido 
+			
+		Planning 
+			2 etapas
+				1º itens mais refinados e revisados com o time (tirar dúvidas)
+				
+				2º pega quais atividades deverão ser desenvolvidas sem o P.O.
+						mais técnico
+						
+			Sprint Backlog
+			
+				itens prioritarios pelo P.O.
+		
+		Release Planning
+			
+			não é obrigatório ter uma release ao final de ums sprint 
+			mas se acumular sprint sem release, mais complexo.
+				
+			Múltiplas Squads
+			
+				vários times de desenvolvimento
+				coisas distintas que podem ou não se relacionar
+				Subir para produção sem afetar os outros squads ou participação direta do P.O
+				
+			Planning de Projeto
+			
+				Quebrar histórias
+				P.O acalma os stakeholders
+				P.O não é o gerente de projetos do Scrum
+				Define as maiores entregas de valor pro cliente
+				maiores entregas de valor primeiro
+				captar retorno do cliente e ajustar histórias
+				 
+				
+		
+	Scrum Master dissemina a cultura ágil no time 
+	
+	
+
+Papel do P.O na transformação Digital
+
+		Mais sobre pessoas do q sobre tecnologia
+		utilizar os melhores recursos disponíveis
+		Mudança nos projetos e como o conhecimento é distribuido
+		ágil é entregar valor
+		errar rápido e corrigir rápido
+		estar um passo a frente!
+		Trabalhar centralizado no cliente.
+		
+		
+	
+Daily 
+	
+	o que fiz ontem, farei hoje e algum impedimento 
+	só é obrigatório para o time DEV
+	
+	
+Retrospectiva
+
+	1 vez na sprint 
+	time de dev e o Scrum Master
+
+Refinamento 
+
+	cerimônia não oficial
+	aumentar o entendimento da demanda
+	
+Review
+
+	time de desenvolvimento apresenta o que foi feito na Sprint para os interessados
+	dúvidas de negócio pelo P.O
+	Scrum Master e o P.O obrigatório 
+	validação!
+	
+Maturidade do time 
+
+	
+
+	
+
+	
+		
+		
+
+	 
+	
+	
+		
+		
+		
+		
+
+				
+				
+				
