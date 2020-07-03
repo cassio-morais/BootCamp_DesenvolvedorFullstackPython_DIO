@@ -42,7 +42,6 @@ function consultaCep(){
             $(".cep").show();
             
             
-            
 
             // pega o elemento pelo id do campo e preenche o valor do dicionário da response 
 
