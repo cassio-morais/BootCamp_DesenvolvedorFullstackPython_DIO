@@ -1,0 +1,58 @@
+git clone do fork // pra meu github
+git remote add upstream // repositório codeshow
+git fetch all // alterações feitas
+git rebase upstream/master 
+
+git stash // pega a alteração feita por mim e "deixa de lado"
+
+
+
+git remote add upstream https://github.com/codeshow/curso-flask.git
+
+git fetch --all
+
+git rebase upstream/master
+
+
+-----------------------------------------------------------------
+
+git log --oneline
+
+mostra o git log com uma linha
+
+---------------------------------------------------------------------
+
+retroceder um commit // descartando modificações
+
+git clean -df 
+
+git checkout -- .
+
+
+---------------------------------------------------------------------
+desfazer um commit mantendo alterações nos arquivos
+
+git reset --soft HEAD~1
+
+---------------------------------------------------------------------
+
+desfazer um commit e desfazer alterações 
+
+
+git reset --hard HEAD~1
+
+-----------------------------------------------------------------------
+
+verificar o projeto em determinado momento 
+
+git checkout 'código do commit no git log' 
+
+para voltar 
+
+git checkout master 
+
+-----------------------------------------------------------------------
+
+associando a um outro repositório remoto 
+
+git remote set-url origin 'url'
